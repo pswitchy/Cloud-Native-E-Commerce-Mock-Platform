@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shop-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shop-app
+  template:
+    metadata:
+      labels:
+        app: shop-app
+    spec:
+      containers:
+        - name: shop-app
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_REDIS_HOST
+              value: {{ .Values.redis.host }}
+            - name: SPRING_RABBITMQ_HOST
+              value: {{ .Values.rabbitmq.host }}
+            - name: SPRING_RABBITMQ_USERNAME
+              value: {{ .Values.rabbitmq.user }}
+            - name: SPRING_RABBITMQ_PASSWORD
+              value: {{ .Values.rabbitmq.password }}

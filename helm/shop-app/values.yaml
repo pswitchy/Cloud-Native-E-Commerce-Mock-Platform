@@ -1,0 +1,9 @@
+image:
+  repository: pswitchy/shop-app
+  tag: v1
+redis:
+  host: production-redis-master
+rabbitmq:
+  host: production-rabbitmq
+  user: user
+  password: password

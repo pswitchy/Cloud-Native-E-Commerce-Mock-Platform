@@ -1,0 +1,8 @@
+target/
+.mvn/
+*.class
+*.jar
+.DS_Store
+.idea/
+*.iml
+kubeconfig
