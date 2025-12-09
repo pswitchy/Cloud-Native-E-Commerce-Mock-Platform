@@ -35,3 +35,7 @@ The application exposes a REST API that handles order processing:
    ```bash
    helm install my-shop ./helm/shop-app
    ```
+
+
+<img width="570" height="125" alt="Screenshot 2025-12-10 at 2 44 44 AM" src="https://github.com/user-attachments/assets/0e2626d4-f7a1-4d2b-b7bb-05fb5de2829f" />
+<img width="603" height="326" alt="Screenshot 2025-12-10 at 2 39 55 AM" src="https://github.com/user-attachments/assets/d9cacf78-9e34-4227-9413-365fed32c02a" />
